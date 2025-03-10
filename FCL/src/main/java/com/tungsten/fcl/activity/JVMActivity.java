@@ -4,7 +4,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
@@ -62,16 +61,11 @@ public class JVMActivity extends FCLNativeActivity {
 
         menu = menuType == MenuType.GAME ? new GameMenu() : new JarExecutorMenu();
         menu.setup(this, fclBridge);
-        //textureView = findViewById(R.id.texture_view);
-        //textureView.setSurfaceTextureListener(this);
 
         popupWindow.setContentView(menu.getLayout());
 
-        if (menuType == MenuType.GAME) {
-            menu.getInput().initExternalController(menu.getLayout());
-        }
-        textureView = findViewById(R.id.texture_view);
-        textureView.setSurfaceTextureListener(this);
+        //textureView = findViewById(R.id.texture_view);
+        //textureView.setSurfaceTextureListener(this);
 
         //addContentView(menu.getLayout(), new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
@@ -96,6 +90,7 @@ public class JVMActivity extends FCLNativeActivity {
     public void surfaceCreated(SurfaceHolder holder) {
         super.surfaceCreated(holder);
         menu.onGraphicOutput();
+        menu.getInput().initExternalController(menu.getLayout());
         fclBridge.execute(holder.getSurface(), menu.getCallbackBridge());
         fclBridge.pushEventWindow(AndroidUtils.getScreenWidth(this), AndroidUtils.getScreenHeight(this));
     }
