@@ -70,6 +70,8 @@ public class JVMActivity extends FCLNativeActivity {
         if (menuType == MenuType.GAME) {
             menu.getInput().initExternalController(menu.getLayout());
         }
+        textureView = findViewById(R.id.texture_view);
+        textureView.setSurfaceTextureListener(this);
 
         //addContentView(menu.getLayout(), new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
@@ -110,6 +112,7 @@ public class JVMActivity extends FCLNativeActivity {
             menu.onGraphicOutput();
             return;
         }
+        menu.getInput().initExternalController(textureView);
         isRunning = true;
         Logging.LOG.log(Level.INFO, "surface ready, start jvm now!");
         fclBridge.setSurfaceDestroyed(false);
@@ -199,15 +202,6 @@ public class JVMActivity extends FCLNativeActivity {
                     return true;
                 }
             }
-        }
-        return handleEvent;
-    }
-
-    @Override
-    public boolean dispatchGenericMotionEvent(MotionEvent event) {
-        boolean handleEvent = true;
-        if (menu != null && menuType == MenuType.GAME) {
-            handleEvent = menu.getInput().handleGenericMotionEvent(event);
         }
         return handleEvent;
     }

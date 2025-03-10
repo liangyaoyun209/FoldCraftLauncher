@@ -79,7 +79,6 @@ import java.util.UUID;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
-import fr.spse.gamepad_remapper.Remapper;
 import kotlin.Unit;
 
 public class GameMenu implements MenuCallback, View.OnClickListener {
@@ -760,11 +759,10 @@ public class GameMenu implements MenuCallback, View.OnClickListener {
             }).show();
         }
         if (v == gamepadResetMapper) {
-            Remapper.wipePreferences(getActivity());
-            getInput().resetMapper();
+
         }
         if (v == gamepadButtonBinding) {
-            new GamepadButtonBindingDialog(getActivity(), menuSetting.getGamepadButtonBindingProperty()).show();
+
         }
         if (v == forceExit) {
             FCLAlertDialog.Builder builder = new FCLAlertDialog.Builder(activity);
