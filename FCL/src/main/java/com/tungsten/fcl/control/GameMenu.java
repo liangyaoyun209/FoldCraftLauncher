@@ -1,6 +1,7 @@
 package com.tungsten.fcl.control;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -48,7 +49,6 @@ import com.tungsten.fclauncher.bridge.FCLBridgeCallback;
 import com.tungsten.fclauncher.keycodes.FCLKeycodes;
 import com.tungsten.fclauncher.utils.FCLPath;
 import com.tungsten.fclcore.fakefx.beans.InvalidationListener;
-import com.tungsten.fclcore.fakefx.beans.binding.Bindings;
 import com.tungsten.fclcore.fakefx.beans.property.BooleanProperty;
 import com.tungsten.fclcore.fakefx.beans.property.IntegerProperty;
 import com.tungsten.fclcore.fakefx.beans.property.ObjectProperty;
@@ -60,7 +60,6 @@ import com.tungsten.fclcore.fakefx.collections.ObservableList;
 import com.tungsten.fclcore.task.Schedulers;
 import com.tungsten.fclcore.util.Logging;
 import com.tungsten.fclcore.util.io.FileUtils;
-import com.tungsten.fcllibrary.component.FCLActivity;
 import com.tungsten.fcllibrary.component.dialog.FCLAlertDialog;
 import com.tungsten.fcllibrary.component.theme.ThemeEngine;
 import com.tungsten.fcllibrary.component.view.FCLButton;
@@ -68,10 +67,8 @@ import com.tungsten.fcllibrary.component.view.FCLImageView;
 import com.tungsten.fcllibrary.component.view.FCLLinearLayout;
 import com.tungsten.fcllibrary.component.view.FCLNumberSeekBar;
 import com.tungsten.fcllibrary.component.view.FCLProgressBar;
-import com.tungsten.fcllibrary.component.view.FCLSeekBar;
 import com.tungsten.fcllibrary.component.view.FCLSpinner;
 import com.tungsten.fcllibrary.component.view.FCLSwitch;
-import com.tungsten.fcllibrary.component.view.FCLTextView;
 import com.tungsten.fcllibrary.util.ConvertUtils;
 
 import java.io.File;
@@ -88,7 +85,7 @@ import kotlin.Unit;
 public class GameMenu implements MenuCallback, View.OnClickListener {
 
     private boolean simulated;
-    private FCLActivity activity;
+    private Activity activity;
     @Nullable
     private FCLBridge fclBridge;
     private FCLInput fclInput;
@@ -133,7 +130,7 @@ public class GameMenu implements MenuCallback, View.OnClickListener {
         this.menuView = menuView;
     }
 
-    public FCLActivity getActivity() {
+    public Activity getActivity() {
         return activity;
     }
 
@@ -485,7 +482,7 @@ public class GameMenu implements MenuCallback, View.OnClickListener {
     }
 
     @Override
-    public void setup(FCLActivity activity, FCLBridge fclBridge) {
+    public void setup(Activity activity, FCLBridge fclBridge) {
         this.activity = activity;
         this.fclBridge = fclBridge;
         this.simulated = fclBridge == null;
