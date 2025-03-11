@@ -41,8 +41,8 @@ android {
         applicationId = "com.tungsten.fcl.mgdebug"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1211
-        versionName = "1.2.1.1"
+        versionCode = 1213
+        versionName = "1.2.1.3"
     }
 
     buildTypes {
