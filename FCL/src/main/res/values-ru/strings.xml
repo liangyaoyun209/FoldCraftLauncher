@@ -549,7 +549,7 @@
     <string name="jar_executor_crash_reason">Анализ причин сбоя исполнителя Jar в настоящее время не поддерживается.</string>
 
     <string name="launch_error_java">Вы используете устаревшую версию Java. Вы уверены, что хотите продолжить?</string>
-    <string name="launch_error_java_auto">Выбрать автоматически (рекомендуется)</string>
+    <string name="launch_error_java_auto">Автовыбор</string>
     <string name="launch_error_java_continue">Продолжить</string>
     <string name="launch_failed">Ошибка запуска</string>
     <string name="launch_failed_download_library">Невозможно загрузить библиотеку %s.</string>
@@ -853,8 +853,9 @@
     <string name="settings_launcher_launcher_log_export">Экспортировать</string>
     <string name="settings_launcher_launcher_log_export_failed">Невозможно экспортировать журналы</string>
     <string name="settings_launcher_launcher_log_export_success">Журналы экспортированы в %s</string>
-    <string name="settings_launcher_theme">Тема</string>
-    <string name="settings_launcher_theme2">Тема 2</string>
+    <string name="settings_launcher_theme">Основной цвет темы</string>
+    <string name="settings_launcher_theme2">Дополнительный цвет темы</string>
+    <string name="settings_launcher_theme_fetch_background">Цвет фона</string>
     <string name="settings_launcher_background_lt">Фон в светлой теме (макс. 5120x5120)</string>
     <string name="settings_launcher_background_dk">Фон в темной теме (макс. 5120x5120)</string>
     <string name="settings_launcher_cursor">Курсор</string>
@@ -910,7 +911,7 @@
     <string name="update_checking">Проверка обновления</string>
     <string name="update_check_failed">Ошибка во время проверки обновления</string>
     <string name="update_date">Дата: %s</string>
-    <string name="update_description">"Описание:</string>
+    <string name="update_description">"Описание: %s</string>
     <string name="update_exist">Новая версия</string>
     <string name="update_failed">Не удалось загрузить последнюю версию, повторите попытку или загрузите ее с официального сайта.</string>
     <string name="update_ignore">Игнорировать</string>
@@ -1018,7 +1019,7 @@
     <string name="install_apk">Установить лаунчер</string>
     <string name="modpack_download_warn_title">Предупреждение</string>
     <string name="modpack_download_warn_msg">Большинство модпаков разработаны для ПК, поэтому возможны сбои. Разработчик лаунчера не несет ответственности за совместимость модпаков.</string>
-    <string name="guide_theme2">Если текст справа отображается нечетко, нажмите сюда, затем «Настройки лаунчера» и выберите «Тема 2»</string>
+    <string name="guide_theme2">Если текст справа отображается нечетко, нажмите сюда, затем «Настройки лаунчера» и выберите «Дополнительный цвет темы»</string>
     <string name="joystick_l">Левый стик</string>
     <string name="gamepad_dpad">Крестовина</string>
     <string name="gamepad_button_binding">Привязка кнопок геймпада</string>
@@ -1041,4 +1042,7 @@
     <string name="import_java">Импорт Java</string>
     <string name="import_java_wrong_file">Поддерживается импорт только файлов tar.xz.</string>
     <string name="import_java_error">Обнаружено, что импортированная вами среда Java, возможно, не предназначена для использования на текущем устройстве. Запуск с ней может привести к сбою лаунчера. Вы хотите продолжить импорт?</string>
+
+    <string name="manage_version">Менеджер версий</string>
+    <string name="select_renderer">Выбрать рендерер</string>
 </resources>
