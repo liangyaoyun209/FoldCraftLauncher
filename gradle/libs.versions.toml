@@ -4,9 +4,20 @@ minSdk = "26"
 targetSdk = "34"
 agp = "8.6.0"
 kotlin = "2.0.21"
+coreKtx = "1.16.0"
+junit = "4.12"
+junitVersion = "1.2.1"
+googletest = "1.11.0-beta-1"
+androidxJUnitGTest = "1.0.0-alpha02"
+
 [libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+googletest = { group = "com.android.ndk.thirdparty", name = "googletest", version.ref = "googletest" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-junit-gtest = { group = "androidx.test.ext", name = "junit-gtest", version.ref = "androidxJUnitGTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.24" }
