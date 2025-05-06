@@ -39,6 +39,7 @@ class RendererUtil {
                     add(context.getString(R.string.settings_fcl_renderer_freedreno))
                     add(context.getString(R.string.settings_fcl_renderer_gl4esp))
                     add(context.getString(R.string.settings_fcl_renderer_mobileglues))
+                    add(context.getString(R.string.settings_fcl_renderer_mobilegl))
                     RendererPlugin.rendererList.forEach {
                         add(it.des)
                     }
@@ -53,6 +54,7 @@ class RendererUtil {
                     add(FCLConfig.Renderer.RENDERER_FREEDRENO)
                     add(FCLConfig.Renderer.RENDERER_GL4ESPLUS)
                     add(FCLConfig.Renderer.RENDERER_MOBILEGLUES)
+                    add(FCLConfig.Renderer.RENDERER_MOBILEGL)
                 }
                 if (position > rendererList.size - 1) {
                     versionSetting.renderer = FCLConfig.Renderer.RENDERER_CUSTOM

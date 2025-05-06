@@ -790,6 +790,7 @@
     <string name="settings_fcl_renderer_freedreno" >Freedreno (OpenGL 4.6, only support GPU a616-a660)</string>
     <string name="settings_fcl_renderer_gl4esp" translatable="false">GL4ES+ (unstable)(OpenGL 2.1)</string>
     <string name="settings_fcl_renderer_mobileglues" translatable="false">MobileGlues (Dev)</string>
+    <string name="settings_fcl_renderer_mobilegl" translatable="false">MobileGL (Dev)</string>
 
     <string name="settings_fcl_driver">Vulkan Driver</string>
 

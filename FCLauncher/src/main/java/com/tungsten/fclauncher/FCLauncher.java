@@ -233,8 +233,8 @@ public class FCLauncher {
     }
 
     private static void addRendererEnv(FCLConfig config, HashMap<String, String> envMap) {
-        FCLConfig.Renderer renderer = config.getRenderer() == null ? FCLConfig.Renderer.RENDERER_GL4ES : config.getRenderer();
-        if (renderer == FCLConfig.Renderer.RENDERER_MOBILEGLUES) {
+        FCLConfig.Renderer renderer = config.getRenderer() == null ? FCLConfig.Renderer.RENDERER_MOBILEGL : config.getRenderer();
+        if (renderer == FCLConfig.Renderer.RENDERER_MOBILEGLUES || renderer == FCLConfig.Renderer.RENDERER_MOBILEGL) {
             envMap.put("LIBGL_ES", "3");
             if (!FCLBridge.BACKEND_IS_BOAT)
                 envMap.put("POJAV_RENDERER", "opengles3");
