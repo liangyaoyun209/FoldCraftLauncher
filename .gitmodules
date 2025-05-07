@@ -1,3 +1,6 @@
 [submodule "MobileGlues"]
 	path = MobileGlues
 	url = https://github.com/Swung0x48/MobileGlues
+[submodule "MobileGL"]
+	path = MobileGL
+	url = https://github.com/MobileGL-Dev/MobileGL.git
