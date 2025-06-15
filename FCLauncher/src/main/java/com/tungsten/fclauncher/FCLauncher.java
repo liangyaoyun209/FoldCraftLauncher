@@ -236,8 +236,11 @@ public class FCLauncher {
         FCLConfig.Renderer renderer = config.getRenderer() == null ? FCLConfig.Renderer.RENDERER_MOBILEGL : config.getRenderer();
         if (renderer == FCLConfig.Renderer.RENDERER_MOBILEGLUES || renderer == FCLConfig.Renderer.RENDERER_MOBILEGL) {
             envMap.put("LIBGL_ES", "3");
-            if (!FCLBridge.BACKEND_IS_BOAT)
+            envMap.put("LIBEGL_NAME", renderer.getEglLibName());
+            if (!FCLBridge.BACKEND_IS_BOAT) {
                 envMap.put("POJAV_RENDERER", "opengles3");
+                envMap.put("POJAVEXEC_EGL", renderer.getEglLibName());
+            }
         }
 
         if (renderer == FCLConfig.Renderer.RENDERER_CUSTOM) {
